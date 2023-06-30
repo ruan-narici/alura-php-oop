@@ -13,6 +13,7 @@ function sacar($conta, $valor) {
     return $conta;
 }
 
+
 $contasCorrentes = [
     //Alterando a chave para o valor do array associativo
     //Essa chave tambe e o indice.
