@@ -25,8 +25,11 @@ $contasCorrentes['12320219232'] = sacar($contasCorrentes['12320219232'], 500);
 
 $contasCorrentes['34920193291'] = depositar($contasCorrentes['34920193291'], 500);
 
-
+//Aplicando o uppercase
 titularComLetraMaiuscula($contasCorrentes['12320219232']);
+
+//Removendo uma conta da lista
+unset($contasCorrentes['34920193291']);
 
 foreach ($contasCorrentes as $cpf => $conta) {
     // list('titular' => $titular, 'saldo' => $saldo) = $conta;
