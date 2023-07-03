@@ -22,4 +22,11 @@ function depositar(array $conta, float $valor): array {
     return $conta;
 }
 
+//Dizendo que a conta vai ser uma referencia. Isto é, o php não vai criar uma copia da nossa variavel, e sim criar uma referencia para ela.
+//Desse modo é possível fazer alterações na variavel original.
+function titularComLetraMaiuscula(array &$conta) {
+    $conta['titular'] = mb_strtoupper($conta['titular']);
+}
+
+
 ?>

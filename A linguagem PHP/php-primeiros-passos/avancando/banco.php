@@ -1,5 +1,6 @@
 <?php
 
+//Adicionando somente uma vez esse arquivo de funcoes. Caso nao localize, vai gerar um erro.
 require_once 'funcoes.php';
 
 
@@ -24,8 +25,19 @@ $contasCorrentes['12320219232'] = sacar($contasCorrentes['12320219232'], 500);
 
 $contasCorrentes['34920193291'] = depositar($contasCorrentes['34920193291'], 500);
 
+
+titularComLetraMaiuscula($contasCorrentes['12320219232']);
+
 foreach ($contasCorrentes as $cpf => $conta) {
+    // list('titular' => $titular, 'saldo' => $saldo) = $conta;
+    ['titular' => $titular, 'saldo' => $saldo] = $conta;
+
+
+    // exibeMensagem("
+    // {$cpf}  - {$conta['titular']} {$conta['saldo']}
+    // ");
+
     exibeMensagem("
-    {$cpf}  - {$conta['titular']} {$conta['saldo']}
+    $cpf $titular $saldo
     ");
 }
