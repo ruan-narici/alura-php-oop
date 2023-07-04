@@ -28,5 +28,8 @@ function titularComLetraMaiuscula(array &$conta) {
     $conta['titular'] = mb_strtoupper($conta['titular']);
 }
 
+function exibeConta(array $conta) {
+    echo "<li>Titular: {$conta['titular']}. Saldo: {$conta['saldo']}</li>";
+}
 
 ?>

@@ -14,7 +14,7 @@ $contasCorrentes = [
     34920193291 => [
         'titular' => 'Cinthia',
         'saldo' => 2000
-    ], 
+    ],
     29401923042 => [
         'titular' => 'Nayara',
         'saldo' => 3000
@@ -31,16 +31,53 @@ titularComLetraMaiuscula($contasCorrentes['12320219232']);
 //Removendo uma conta da lista
 unset($contasCorrentes['34920193291']);
 
-foreach ($contasCorrentes as $cpf => $conta) {
-    // list('titular' => $titular, 'saldo' => $saldo) = $conta;
-    ['titular' => $titular, 'saldo' => $saldo] = $conta;
+// echo "<ul>";
+// foreach ($contasCorrentes as $cpf => $conta) {
+// list('titular' => $titular, 'saldo' => $saldo) = $conta;
+// ['titular' => $titular, 'saldo' => $saldo] = $conta;
 
 
-    // exibeMensagem("
-    // {$cpf}  - {$conta['titular']} {$conta['saldo']}
-    // ");
+// // exibeMensagem("
+// // {$cpf}  - {$conta['titular']} {$conta['saldo']}
+// // ");
 
-    exibeMensagem("
-    $cpf $titular $saldo
-    ");
-}
+// exibeMensagem("
+// $cpf $titular $saldo
+// ");
+
+// exibeConta($conta);
+// }
+// echo "</ul>";
+
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conta corrente</title>
+</head>
+
+<body>
+    <h1>Contas Correntes</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th scope="col"><h3>Titular</h3></th>
+                <th scope="col"><h3>Saldo</h3></th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($contasCorrentes as $cpf => $conta) { ?>
+                <tr>
+                    <th scope="row"><?= $conta['titular'] ?></th>
+                    <th scope="row"><?= $conta['saldo'] ?></th>
+                </tr>
+            <?php } ?>
+        </tbody>
+    </table>
+</body>
+
+</html>
