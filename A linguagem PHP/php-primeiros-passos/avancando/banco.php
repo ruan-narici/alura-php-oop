@@ -3,7 +3,6 @@
 //Adicionando somente uma vez esse arquivo de funcoes. Caso nao localize, vai gerar um erro.
 require_once 'funcoes.php';
 
-
 $contasCorrentes = [
     //Alterando a chave para o valor do array associativo
     //Essa chave tambe e o indice.
