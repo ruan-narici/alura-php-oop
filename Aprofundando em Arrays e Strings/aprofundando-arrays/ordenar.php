@@ -8,6 +8,7 @@ $arrayNumeros = [
     1
 ];
 
+
 echo "Imprimir padrao:" . PHP_EOL;
 var_dump($arrayNumeros);
 
