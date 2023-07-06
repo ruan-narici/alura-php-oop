@@ -3,6 +3,7 @@
 $idade = 19;
 $numeroDePessoas = 1;
 
+
 echo "Você só pode entrar se tiver a partir de 18 anos ou ";
 echo "a partir de 16 anos acompanhado" . PHP_EOL;
 
