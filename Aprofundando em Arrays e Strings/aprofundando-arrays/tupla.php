@@ -35,4 +35,6 @@ $arrayTupla2 = [
 ['nome' => $nome3, 'sexo' => $sexo3, 'idade' => $idade3] = $arrayTupla2;
 var_dump($nome3, $sexo3, $idade3);
 
+
+
 ?>
