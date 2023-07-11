@@ -106,4 +106,19 @@ $numeroDeMedalhas = array_reduce($arquivoJson, function ($medalhasAcumuladas, $i
 
 echo "Total de medalhas entregues: $numeroDeMedalhas";
 
+
+echo PHP_EOL . " # TESTE REDUCE # " . PHP_EOL;
+$arrayTeste = [
+    1,
+    3,
+    5,
+    7,
+    8
+];
+
+$somaTotalTeste = array_reduce($arrayTeste, function($somaAcumulada, $valorAtual) {
+    return $somaAcumulada + $valorAtual;
+});
+
+echo $somaTotalTeste;
 ?>
