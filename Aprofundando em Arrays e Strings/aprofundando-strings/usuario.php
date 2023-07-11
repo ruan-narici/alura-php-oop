@@ -13,4 +13,5 @@ $indiceArroba = strpos($email2, '@', 0);
 // Exibindo o que tem depois do @ 
 echo substr($email2, $indiceArroba +1);
 
+
 ?>
