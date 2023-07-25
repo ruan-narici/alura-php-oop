@@ -3,7 +3,7 @@
 class Conta {
     private string $nome;
     private string $cpf;
-    private float $saldo;
+    private float $saldo = 0;
 
     public function defineNome(string $nome): void {
         $this->nome = $nome;
@@ -40,7 +40,7 @@ class Conta {
             return;
         }
 
-       $this->saldo += $valor;
+        $this->saldo += $valor;
     }
 
     public function transferir(float $valor, Conta $conta): void {
@@ -53,5 +53,3 @@ class Conta {
         $conta->depositar($valor);
     }
 }
-
-?>
