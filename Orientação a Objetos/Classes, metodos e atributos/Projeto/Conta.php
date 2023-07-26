@@ -14,6 +14,10 @@ class Conta {
         self::$numeroContas++;
     }
 
+    public function __destruct() {
+        echo $this->nome . " DEIXANDO DE EXISTIR DA MEMORIA." . PHP_EOL;
+    }
+
     public function defineNome(string $nome): void {
         $this->nome = $nome;
     }
