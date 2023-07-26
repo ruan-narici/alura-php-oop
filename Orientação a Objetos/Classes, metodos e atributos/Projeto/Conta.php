@@ -1,37 +1,27 @@
 <?php
 
 class Conta {
-    private string $nome;
-    private string $cpf;
+    private Titular $titular;
     private float $saldo;
 
     private static int $numeroContas = 0;
 
-    public function __construct(string $nome, string $cpf) {
-        $this->nome = $nome;
-        $this->cpf = $cpf;
+    public function __construct(Titular $titular) {
+        $this->titular = $titular;
         $this->saldo = 0;
         self::$numeroContas++;
     }
 
     public function __destruct() {
-        echo $this->nome . " DEIXANDO DE EXISTIR DA MEMORIA." . PHP_EOL;
-    }
-
-    public function defineNome(string $nome): void {
-        $this->nome = $nome;
+        echo $this->titular->getNome() . " DEIXANDO DE EXISTIR DA MEMORIA." . PHP_EOL;
     }
 
     public function exibirNome(): string {
-        return $this->nome;
-    }
-
-    public function defineCpf(string $cpf): void {
-        $this->cpf = $cpf;
+        return $this->titular->getNome();
     }
 
     public function exibirCpf(): string {
-        return $this->cpf;
+        return $this->titular->getCpf();
     }
 
     public function sacar(float $valor): void {
