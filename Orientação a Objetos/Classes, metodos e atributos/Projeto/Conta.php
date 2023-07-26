@@ -3,7 +3,16 @@
 class Conta {
     private string $nome;
     private string $cpf;
-    private float $saldo = 0;
+    private float $saldo;
+
+    private static int $numeroContas = 0;
+
+    public function __construct(string $nome, string $cpf) {
+        $this->nome = $nome;
+        $this->cpf = $cpf;
+        $this->saldo = 0;
+        self::$numeroContas++;
+    }
 
     public function defineNome(string $nome): void {
         $this->nome = $nome;
@@ -51,5 +60,9 @@ class Conta {
 
         $this->saldo -= $valor;
         $conta->depositar($valor);
+    }
+
+    public static function recuperaNumeroContas(): int {
+        return self::$numeroContas;
     }
 }
