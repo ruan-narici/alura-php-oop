@@ -1,5 +1,7 @@
 <?php
 
+namespace Modelo\Conta;
+
 class Conta {
     private Titular $titular;
     private float $saldo;
@@ -13,7 +15,7 @@ class Conta {
     }
 
     public function __destruct() {
-        echo $this->titular->getNome() . " DEIXANDO DE EXISTIR DA MEMORIA." . PHP_EOL;
+        echo $this->titular->recuperaNome() . " DEIXANDO DE EXISTIR DA MEMORIA." . PHP_EOL;
     }
 
     public function exibirNome(): string {

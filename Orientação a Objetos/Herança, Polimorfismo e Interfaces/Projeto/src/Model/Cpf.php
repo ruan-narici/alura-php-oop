@@ -1,5 +1,6 @@
 <?php
 
+namespace Modelo;
 class Cpf {
     private String $numero;
 

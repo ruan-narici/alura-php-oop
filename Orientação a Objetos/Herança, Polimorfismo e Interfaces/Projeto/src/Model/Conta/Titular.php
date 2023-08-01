@@ -1,5 +1,10 @@
 <?php
 
+namespace Modelo\Conta;
+
+use Modelo\Cpf;
+use Modelo\Pessoa;
+
 class Titular extends Pessoa{
     private String $endereco;
 
