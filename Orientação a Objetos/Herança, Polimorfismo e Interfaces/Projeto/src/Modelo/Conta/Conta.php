@@ -4,7 +4,7 @@ namespace Alura\Banco\Modelo\Conta;
 
 class Conta {
     private Titular $titular;
-    private float $saldo;
+    protected float $saldo;
 
     private static int $numeroContas = 0;
 
@@ -16,6 +16,7 @@ class Conta {
 
     public function __destruct() {
         echo $this->titular->recuperaNome() . " DEIXANDO DE EXISTIR DA MEMORIA." . PHP_EOL;
+        self::$numeroContas--;
     }
 
     public function exibirNome(): string {
@@ -27,12 +28,13 @@ class Conta {
     }
 
     public function sacar(float $valor): void {
+        $tarifa = 0.05;
         if ($valor > $this->saldo) {
             echo "Saldo insuficiente!" . PHP_EOL;
             return;
         }
 
-        $this->saldo -= $valor;
+        $this->saldo -= $valor + ($tarifa * $valor);
     }
 
     public function exibirSaldo(): float {
