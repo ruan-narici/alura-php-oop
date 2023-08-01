@@ -17,7 +17,7 @@ class Pessoa {
         return $this->cpf->recuperaNumeroCpf();
     }
 
-    private function validaNome(String $nome): void {
+    protected function validaNome(String $nome): void {
         if (strlen($nome) < 5) {
             echo "O nome deve possuir mais que 5 caracteres." . PHP_EOL;
             exit();
