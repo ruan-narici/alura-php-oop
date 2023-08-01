@@ -1,13 +1,14 @@
 <?php
 
 use Alura\Banco\Modelo\Conta\Conta;
+use Alura\Banco\Modelo\Conta\ContaCorrente;
 use Alura\Banco\Modelo\Conta\ContaPoupanca;
 use Alura\Banco\Modelo\Conta\Titular;
 use Alura\Banco\Modelo\Cpf;
 
 require_once 'autoload.php';
 
-$contaCorrente = new Conta(
+$contaCorrente = new ContaCorrente(
         new Titular(
             "Ruan Narici", 
             new Cpf("000.111.222-00"), 
@@ -15,7 +16,7 @@ $contaCorrente = new Conta(
 
 $contaCorrente->depositar(500);
 $contaCorrente->sacar(100);
-echo $contaCorrente->exibirSaldo() . PHP_EOL;
+echo $contaCorrente->exibirNome() . ", Saldo: " . $contaCorrente->exibirSaldo() . PHP_EOL;
 
 $contaPoupanca = new ContaPoupanca(
     new Titular(
@@ -25,4 +26,4 @@ $contaPoupanca = new ContaPoupanca(
 
 $contaPoupanca->depositar(500);
 $contaPoupanca->sacar(100);
-echo $contaPoupanca->exibirSaldo() . PHP_EOL;
+echo $contaPoupanca->exibirNome() . ", Saldo: " .  $contaPoupanca->exibirSaldo() . PHP_EOL;
