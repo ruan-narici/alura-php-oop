@@ -5,7 +5,7 @@ namespace Alura\Banco\Modelo\Conta;
 use Alura\Banco\Modelo\Cpf;
 use Alura\Banco\Modelo\Pessoa;
 
-class Titular extends Pessoa{
+class Titular extends Pessoa {
     private String $endereco;
 
     public function __construct(string $nome, Cpf $cpf, string $endereco) {
