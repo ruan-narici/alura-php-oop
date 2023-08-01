@@ -1,6 +1,5 @@
 <?php
 
-require_once 'autoload.php';
 require_once 'src/Modelo/Pessoa.php';
 require_once 'src/Modelo/Conta/Titular.php';
 require_once 'src/Modelo/Cpf.php';

@@ -7,6 +7,7 @@ spl_autoload_register(function (string $nomeCompletoDaClasse){
     if(file_exists($caminhoArquivo)) {
         require_once $caminhoArquivo;
     }
+    echo $caminhoArquivo;
 });
 
 ?>
