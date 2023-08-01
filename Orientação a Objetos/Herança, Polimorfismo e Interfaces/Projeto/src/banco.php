@@ -1,5 +1,8 @@
 <?php
 
+require_once 'Modelo/Conta/Titular.php';
+require_once 'Modelo/Cpf.php';
+
 use Alura\Banco\Modelo\Conta\Titular;
 use Alura\Banco\Modelo\Cpf;
 
