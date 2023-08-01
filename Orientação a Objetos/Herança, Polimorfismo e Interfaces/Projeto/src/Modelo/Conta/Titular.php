@@ -1,9 +1,9 @@
 <?php
 
-namespace Modelo\Conta;
+namespace Alura\Banco\Modelo\Conta;
 
-use Modelo\Cpf;
-use Modelo\Pessoa;
+use Alura\Banco\Modelo\Cpf;
+use Alura\Banco\Modelo\Pessoa;
 
 class Titular extends Pessoa{
     private String $endereco;
