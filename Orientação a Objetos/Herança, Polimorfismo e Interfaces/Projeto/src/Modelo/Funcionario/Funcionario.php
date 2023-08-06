@@ -5,17 +5,12 @@ namespace Alura\Banco\Modelo\Funcionario;
 use Alura\Banco\Modelo\{Pessoa, Cpf};
 
 abstract class Funcionario extends Pessoa {
-    private String $cargo;
+
     private float $salario;
 
-    public function __construct(string $nome, Cpf $cpf, string $cargo, $salario)  {
+    public function __construct(string $nome, Cpf $cpf, float $salario)  {
         parent::__construct($nome, $cpf);
-        $this->cargo = $cargo;
         $this->salario = $salario;
-    }
-
-    public function recuperaCargo(): string {
-        return $this->cargo;
     }
 
     public function recuperaSalario(): float {
@@ -26,10 +21,7 @@ abstract class Funcionario extends Pessoa {
         $this->validaNome($nome);
     }
 
-    public function calculaBonificacao(): float {
-        $bonificacao = 0.1;
-        return $this->salario * $bonificacao;
-    }
+    public abstract function calculaBonificacao(): float;
 
     public function recebeAumento(float $valorAumento): void {
         if ($valorAumento < 0) {
