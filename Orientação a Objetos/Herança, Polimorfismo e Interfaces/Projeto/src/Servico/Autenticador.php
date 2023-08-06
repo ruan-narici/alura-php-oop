@@ -2,12 +2,13 @@
 
 namespace Alura\Banco\Servico;
 
+use Alura\Banco\Modelo\Autenticavel;
 use Alura\Banco\Modelo\Funcionario\Diretor;
 
 class Autenticador {
 
-    public function autentica(Diretor $diretor, string $senha): void {
-        if ($diretor->autentica($senha)) {
+    public function autentica(Autenticavel $autenticavel, string $senha): void {
+        if ($autenticavel->autentica($senha)) {
             echo "Acesso liberado." . PHP_EOL;
             return;
         }
