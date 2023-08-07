@@ -3,7 +3,6 @@
 namespace Alura\Banco\Servico;
 
 use Alura\Banco\Modelo\Autenticavel;
-use Alura\Banco\Modelo\Funcionario\Diretor;
 
 class Autenticador {
 

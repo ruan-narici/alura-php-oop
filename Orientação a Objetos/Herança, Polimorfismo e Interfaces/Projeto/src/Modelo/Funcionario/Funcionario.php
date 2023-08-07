@@ -31,4 +31,8 @@ abstract class Funcionario extends Pessoa {
 
         $this->salario += $valorAumento;
     }
+
+    public function __toString(): string {
+        return "{$this->nome}, {$this->cpf->recuperaNumeroCpf()}, {$this->salario}";
+    }
 }
