@@ -1,1 +1,2 @@
 PHP I/O: trabalhando com arquivos e streams
+PHP Exceptions: tratamento de erros

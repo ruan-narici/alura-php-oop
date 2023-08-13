@@ -1,11 +1,16 @@
 <?php
 
-$arquivo = fopen(__DIR__ . "/escritorCursos.txt", "w");
+// $arquivo = fopen(__DIR__ . "/escritorCursos.txt", "w");
 
-$curso = "PHP I/O: trabalhando com arquivos e streams";
+// $curso = "PHP I/O: trabalhando com arquivos e streams";
 
-fwrite($arquivo, $curso);
+// fwrite($arquivo, $curso);
 
-fclose($arquivo);
+// fclose($arquivo);
+
+
+$curso2 = PHP_EOL . "PHP Exceptions: tratamento de erros";
+
+file_put_contents(__DIR__ . "/escritorCursos.txt", $curso2, FILE_APPEND);
 
 ?>
