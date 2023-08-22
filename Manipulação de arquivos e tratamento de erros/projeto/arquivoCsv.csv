@@ -1,14 +1,14 @@
 "Nome do Curso";"Aula feita por mim"
-"Symfony Parte 1 CriaÃ§Ã£o de uma API Restful";sim
-"Symfony Parte 2 AutenticaÃ§Ã£o e HATEOAS";sim
-"PHP Doctrine IntroduÃ§Ã£o ao Mapeamento Objeto-Relacional";sim
+"Symfony Parte 1 Criação de uma API Restful";sim
+"Symfony Parte 2 Autenticação e HATEOAS";sim
+"PHP Doctrine Introdução ao Mapeamento Objeto-Relacional";sim
 "Laravel parte 1 Produtividade no desenvolvimento web";sim
-"Laravel parte 2 Trabalhando com AutenticaÃ§Ã£o, Relacionamentos e Testes";sim
+"Laravel parte 2 Trabalhando com Autenticação, Relacionamentos e Testes";sim
 "Lumen API Rest com o Micro-framework do Laravel";sim
-"IntroduÃ§Ã£o ao PHP Primeiros passos com a linguagem";sim
-"AvanÃ§ando com PHP Arrays, Strings, FunÃ§Ã£o e Web";sim
-"MVC com PHP Entenda o padrÃ£o Model-View-Controller";sim
-"PHP Composer DependÃªncias, Autoload e PublicaÃ§Ã£o";sim
+"Introdução ao PHP Primeiros passos com a linguagem";sim
+"Avançando com PHP Arrays, Strings, Função e Web";sim
+"MVC com PHP Entenda o padrão Model-View-Controller";sim
+"PHP Composer Dependências, Autoload e Publicação";sim
 "PHP e TDD  Testes com PHPUnit";sim
 "PHP I/O: trabalhando com arquivos e streams";nao
 "PHP Exceptions: tratamento de erros";nao

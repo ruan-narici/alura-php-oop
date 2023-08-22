@@ -7,19 +7,19 @@ $arquivo = fopen(__DIR__ . "/arquivoCsv.csv", "w");
 fputcsv($arquivo, ["Nome do Curso", "Aula feita por mim"], ";");
 
 foreach($meusCursos as $curso) {
-    $linha = [trim($curso), "sim"];
+    $linha = [trim(utf8_decode($curso)), "sim"];
 
     fputcsv($arquivo, $linha, ";");
 };
 
 foreach($outrosCursos as $curso) {
-    $linha = [trim($curso), "nao"];
+    $linha = [trim(utf8_decode($curso)), "nao"];
 
     fputcsv($arquivo, $linha, ";");
 };
 
 fclose($arquivo);
 
-echo file_get_contents(__DIR__ . "/arquivoCsv.csv");
+echo utf8_encode(file_get_contents(__DIR__ . "/arquivoCsv.csv"));
 
 ?>
