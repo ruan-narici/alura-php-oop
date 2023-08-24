@@ -21,5 +21,4 @@ foreach($outrosCursos as $curso) {
 fclose($arquivo);
 
 echo utf8_encode(file_get_contents(__DIR__ . "/arquivoCsv.csv"));
-
 ?>
